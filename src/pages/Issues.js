@@ -5,7 +5,7 @@ import { useGetJSON } from '../logic/api/fetchData'
 import { BootstrapColumLayout } from '../constants'
 import LangLink from '../components/LangLink'
 
-const Issues = ({ match: { params: { issueId }}}) => {
+const Issues = () => {
   const { t } = useTranslation()
   const { data:issues, error, status } = useGetJSON({ url: `/mock-api/issues.json`, delay: 0 })
   console.info('Issues status', status, 'error', error)
